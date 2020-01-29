@@ -17,11 +17,11 @@ public void mouseDragged()//optional
 public void sierpinski(float x, float y, float len) 
 {
 	if (len > 1){  
+		sierpinski(x - len, y + len - len / 4 , len / 2);
+   		sierpinski(x + len , y + len - len / 4 , len / 2);
+   		sierpinski(x , y - len - len / 4, len / 2);
    		triangle(x - len/2, y + len / 2, x + len/2, y + len / 2, x, y + len + len / 2);
    		triangle(x - len/2 - len / 2, y - len / 2, x + len/2 - len / 2, y - len / 2, x - len / 2, y + len - len / 2);
    		triangle(x - len/2 + len / 2, y - len / 2, x + len/2 + len / 2, y - len / 2, x + len / 2, y + len - len / 2);
-   		sierpinski(x - len, y + len - len / 4 , len / 2);
-   		sierpinski(x + len , y + len - len / 4 , len / 2);
-   		sierpinski(x , y - len - len / 4, len / 2);
 	} 
 }
